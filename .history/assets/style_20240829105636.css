@@ -28,7 +28,7 @@ header nav {
     list-style: none;
     display: flex;
     gap: 20px;
-    
+    display: flex
 }
 
 .nav-links a {

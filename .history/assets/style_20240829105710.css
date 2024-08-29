@@ -17,6 +17,7 @@ header nav {
     align-items: center;
     padding: 20px;
     background-color: #1a1a1a;
+    position: center;
 }
 
 .logo img {
