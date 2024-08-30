@@ -21,34 +21,18 @@ header nav {
     background-color: #1a1a1a;
 }
 
-/* Seção esquerda contendo a logo e os links */
-.left-section {
-    display: flex;
-    align-items: center;
-}
-
 /* Logo alinhada à esquerda */
 .logo {
     display: flex;
     align-items: center;
-    margin-right: 30px; /* Ajuste este valor para aumentar ou diminuir a distância */
 }
-
-
-
-
-.logo img {
-    width: 60px; /* Ajuste o valor conforme necessário */
-    height: auto;
-}
-
 
 /* Links de navegação à direita da logo */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-left: 0; /* Remover a margem esquerda */
+    margin-left: 20px; /* Distância entre a logo e os links */
 }
 
 /* Estilo dos itens de navegação */

@@ -34,11 +34,16 @@ header nav {
     margin-right: 30px; /* Ajuste este valor para aumentar ou diminuir a distância */
 }
 
-
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-left: 0; /* Remover a margem esquerda */
+}
 
 
 .logo img {
-    width: 60px; /* Ajuste o valor conforme necessário */
+    width: 50px; /* Ajuste o valor conforme necessário */
     height: auto;
 }
 
@@ -48,7 +53,6 @@ header nav {
     list-style: none;
     display: flex;
     gap: 20px;
-    margin-left: 0; /* Remover a margem esquerda */
 }
 
 /* Estilo dos itens de navegação */
