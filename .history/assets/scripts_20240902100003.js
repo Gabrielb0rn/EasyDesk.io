@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para verificar se usuário está logado
     function checkLogin() {
         let isLoggedIn = localStorage.getItem('isLoggedIn');
-        if (!isLoggedIn && window.location.pathname !== '/index.html') {
+        if (!isLoggedIn && window.location.pathname !== '/index.html' && window.location.pathname !== '/register.html') {
             window.location.href = 'index.html';
         }
     }
@@ -25,8 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para salvar produto
     function saveProduct(name, description, price, quantity) {
         let products = JSON.parse(localStorage.getItem('products')) || [];
-        let product = { id: Date.now(), name, description, price, quantity };
-        products.push(product);
+        let existingProductIndex = products.findIndex(product => product.name === name);
+        if (existingProductIndex !== -1) {
+            // Atualiza produto existente
+            products[existingProductIndex] = { ...products[existingProductIndex], description, price, quantity };
+        } else {
+            // Adiciona novo produto
+            let product = { id: Date.now(), name, description, price, quantity };
+            products.push(product);
+        }
         localStorage.setItem('products', JSON.stringify(products));
     }
 
@@ -53,8 +60,21 @@ document.addEventListener('DOMContentLoaded', function() {
         return products;
     }
 
+    // Adicionar usuário admin
+    function addAdminUser() {
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+        let adminExists = users.some(user => user.email === 'admin@admin.com');
+        if (!adminExists) {
+            users.push({ name: 'admin', email: 'admin@admin.com', password: 'admin' });
+            localStorage.setItem('users', JSON.stringify(users));
+        }
+    }
+
+    // Adicionar usuário admin no carregamento da página
+    addAdminUser();
+
     // Eventos da página de cadastro
-    if (window.location.pathname === '/register.html') {
+    if (window.location.pathname.endsWith('register.html')) {
         document.getElementById('registerForm').addEventListener('submit', function(event) {
             event.preventDefault();
             let name = document.getElementById('name').value;
@@ -67,7 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Eventos da página de login
-    if (window.location.pathname === '/index.html') {
+    if (window.location.pathname.endsWith('index.html')) {
         document.getElementById('loginForm').addEventListener('submit', function(event) {
             event.preventDefault();
             let email = document.getElementById('email').value;
@@ -82,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Eventos da página de gerenciamento de produtos
-    if (window.location.pathname === '/dashboard.html') {
+    if (window.location.pathname.endsWith('dashboard.html')) {
         checkLogin();
         document.getElementById('productForm').addEventListener('submit', function(event) {
             event.preventDefault();
@@ -117,3 +137,19 @@ document.addEventListener('DOMContentLoaded', function() {
         displayProducts();
     }
 });
+
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.color = '#2575fc';
+        });
+
+        link.addEventListener('mouseout', () => {
+            link.style.color = 'white';
+        });
+    });
+});
+

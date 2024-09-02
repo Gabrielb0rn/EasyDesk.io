@@ -25,8 +25,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Função para salvar produto
     function saveProduct(name, description, price, quantity) {
         let products = JSON.parse(localStorage.getItem('products')) || [];
-        let product = { id: Date.now(), name, description, price, quantity };
-        products.push(product);
+        let existingProductIndex = products.findIndex(product => product.name === name);
+        if (existingProductIndex !== -1) {
+            // Atualiza produto existente
+            products[existingProductIndex] = { ...products[existingProductIndex], description, price, quantity };
+        } else {
+            // Adiciona novo produto
+            let product = { id: Date.now(), name, description, price, quantity };
+            products.push(product);
+        }
         localStorage.setItem('products', JSON.stringify(products));
     }
 
@@ -56,9 +63,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Adicionar usuário admin
     function addAdminUser() {
         let users = JSON.parse(localStorage.getItem('users')) || [];
-        let adminExists = users.some(user => user.email === 'admin');
+        let adminExists = users.some(user => user.email === 'admin@admin.com');
         if (!adminExists) {
-            users.push({ name: 'admin', email: 'admin', password: 'admin' });
+            users.push({ name: 'admin', email: 'admin@admin.com', password: 'admin' });
             localStorage.setItem('users', JSON.stringify(users));
         }
     }
@@ -130,3 +137,19 @@ document.addEventListener('DOMContentLoaded', function() {
         displayProducts();
     }
 });
+
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('mouseover', () => {
+            link.style.color = '#2575fc';
+        });
+
+        link.addEventListener('mouseout', () => {
+            link.style.color = 'white';
+        });
+    });
+});
+
