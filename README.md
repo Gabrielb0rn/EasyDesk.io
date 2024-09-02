@@ -70,3 +70,28 @@ Integração do armazenamento local (LocalStorage) para manter o estado das din�
 ## Apresentação do Projeto:
 Apresentação do website, demonstrando as funcionalidades implementadas.
 Explicação de como a lógica de programação foi aplicada na solução e a escolha da identidade visual.
+
+
+
+
+# Equipe:
+- Gabriel Oliveira Born - Líder da equipe
+- Jordan Soares Aguiar
+- Marco Antônio Loregian de Paiva
+- Francisco Pasini Lozzi
+- Maria Clara Rodrigues Bernardes
+- Gabriela Sagrilo Bordignon
+
+
+
+
+## Site no github: [link](https://gabrielb0rn.github.io/EasyDesk.io/)
+
+## Figma do protótipo do site: [link](https://www.figma.com/proto/poOewxspXuyLA4VKxjA3tQ/EasyDesk-Telas?node-id=54-392&t=Ml4w9sfLQP74aTty-1)
+
+## Docs com as informações da empresa: [link](https://docs.google.com/document/d/1hjtbVi8JdS_imzf1geeQobeCTjB_XcVVTOFoxW4i9TI/edit?usp=sharing)
+
+
+
+
+
