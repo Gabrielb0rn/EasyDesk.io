@@ -1,1 +1,0 @@
-const campoLogin = document.getElementById("login");
