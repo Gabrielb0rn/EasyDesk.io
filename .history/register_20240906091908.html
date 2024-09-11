@@ -16,7 +16,6 @@
             <form action="register-action.html" method="post">
                 <input type="text" name="name" placeholder="Nome Completo" required>
                 <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" class="Telefone" placeholder="Telefone" name="Telefone" required>
                 <input type="password" name="password" placeholder="Senha" required>
                 <input type="password" name="confirm-password" placeholder="Confirme a Senha" required>
                 <br><br>
@@ -32,35 +31,5 @@
             <a href="login.html">Já tem uma conta? Faça login</a>
         </div>
     </div>
-    <script src="assets/register/script.js"></script>
-    <script>
-        $(document).ready(function() {
-    
-            $('body').on('focus', '.Telefone', function() {
-                var maskBehavior = function(val) {
-                    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-                };
-                var options = {
-                    onKeyPress: function(val, e, field, options) {
-                        field.mask(maskBehavior.apply({}, arguments), options);
-                        if (field[0].value.length >= 14) {
-                            var val = field[0].value.replace(/\D/g, '');
-                            if (/\d\d(\d)\1{7,8}/.test(val)) {
-                                field[0].value = '';
-                                alert('Telefone Inválido');
-                            }
-                        }
-                    }
-                };
-                $(this).mask(maskBehavior, options);
-            });
-        
-            $('.Telefone').each(function() {
-                $(this).mask(function(val) {
-                    return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
-                });
-            });
-        });
-    </script>
 </body>
 </html>

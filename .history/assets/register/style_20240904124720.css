@@ -37,7 +37,6 @@ body {
 
 .register-box input[type="text"],
 .register-box input[type="email"],
-.register-box input[type="tel"],
 .register-box input[type="password"] {
     width: 96%;
     padding: 10px;
@@ -157,6 +156,3 @@ body {
 .checkbox-container .terms-container a:hover {
     color: #8C84B3;
 }
-
-/* Telefone */
-
