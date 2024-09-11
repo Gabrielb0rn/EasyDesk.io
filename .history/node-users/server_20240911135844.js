@@ -15,6 +15,7 @@ server.register(cors, {
 // ENDPOINTS (CRUD):
 
 // CREATE
+// let, cons, num
 
 // REATE
 
