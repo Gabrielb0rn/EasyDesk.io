@@ -153,26 +153,13 @@ body {
 }
 
 /* Ajuste para termos de uso e política */
-.checkbox-container .terms-container {
-    flex-wrap: wrap; /* Ajusta caso a linha seja quebrada */
-    align-items: center;
-    gap: 5px;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-/* Estilo dos links dos termos */
-.checkbox-container .terms-container a {
+.checkbox-container a {
     color: #F2CF66;
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap; /* Evita quebra de linha nos links */
-    display: inline-block;
-    vertical-align: middle;
+    transition: color 0.3s ease;
 }
 
-.checkbox-container .terms-container a:hover {
+.checkbox-container a:hover {
     color: #8C84B3;
 }
-
-

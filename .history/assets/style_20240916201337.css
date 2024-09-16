@@ -588,89 +588,39 @@ form button:hover {
     }
 }
 
-/* Estilo da página de contato */
-.contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background: var(--hero-bg-gradient); /* Degradê de fundo */
-    padding: 20px;
-}
-
-.contact-form-section {
-    background-color: var(--card-bg);
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    width: 100%;
-    text-align: center;
-}
-
-.contact-form-section h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.contact-form-section p {
-    font-size: 18px;
-    margin-bottom: 30px;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-.contact-form label {
+/* Ajuste para garantir que as cores dos links não mudem no hover, para ambos os temas */
+.nav-links a {
+    color: var(--link-color); /* Usa a cor do link definida na variável de tema */
+    text-decoration: none;
     font-size: 16px;
-    font-weight: bold;
-    color: var(--text-color);
-    text-align: left;
+    transition: color 0.3s ease;
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #fff;
-    font-size: 16px;
-    color: var(--text-color);
+.nav-links a:hover {
+    color: var(--link-hover-color); /* Usa a cor de hover definida na variável de tema */
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: var(--link-hover-color);
-    outline: none;
-    box-shadow: 0 0 5px rgba(106, 17, 203, 0.5);
-}
-
-.contact-form button {
+/* Ajuste específico para o botão de autenticação */
+.auth-buttons button {
     background-color: var(--button-bg);
     color: var(--button-text-color);
     border: none;
-    padding: 15px;
+    padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.contact-form button:hover {
+.auth-buttons button:hover {
     background-color: var(--link-hover-color);
+    color: var(--button-text-color); /* Certifica-se de que a cor do texto no hover não mude */
 }
 
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .contact-form-section {
-        padding: 20px;
-    }
+/* Garantindo que o estilo de imagem no modo claro e escuro seja consistente */
+body.dark-theme .nav-links img {
+    filter: brightness(0) invert(1); /* Mantém as imagens brancas no modo escuro */
+}
 
-    .contact-form button {
-        padding: 12px;
-    }
+body.light-theme .nav-links img {
+    filter: brightness(1); /* Mantém as imagens normais no modo claro */
 }

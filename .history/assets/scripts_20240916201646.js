@@ -153,4 +153,12 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+// Exemplo básico de troca de tema
+const toggleThemeButton = document.querySelector('.theme-toggle');
+const body = document.body;
+
+toggleThemeButton.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+    body.classList.toggle('light-theme'); // Alterna entre os dois temas
+});
 

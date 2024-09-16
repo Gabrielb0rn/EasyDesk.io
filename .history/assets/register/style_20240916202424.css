@@ -1,10 +1,8 @@
-/* Estilos principais */
 body {
     background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
     color: white;
 }
 
-/* Container principal de registro */
 .register-container {
     display: flex;
     flex-direction: column;
@@ -14,7 +12,6 @@ body {
     padding: 20px;
 }
 
-/* Caixa de registro */
 .register-box {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px;
@@ -26,21 +23,18 @@ body {
     margin: 0 auto;
 }
 
-/* Logo */
 .register-box img {
     width: 80px;
     height: auto;
     margin-bottom: 20px;
 }
 
-/* Título */
 .register-box h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: white;
 }
 
-/* Inputs */
 .register-box input[type="text"],
 .register-box input[type="email"],
 .register-box input[type="tel"],
@@ -54,7 +48,6 @@ body {
     color: white;
 }
 
-/* Botão de envio */
 .register-box input[type="submit"] {
     width: 100%;
     padding: 10px;
@@ -72,7 +65,6 @@ body {
     background-color: #8C84B3;
 }
 
-/* Links */
 .register-box a {
     display: block;
     margin-top: 20px;
@@ -86,7 +78,6 @@ body {
     color: #8C84B3;
 }
 
-/* Link de voltar */
 .back-link {
     position: absolute;
     top: 20px;
@@ -104,19 +95,17 @@ body {
     background-color: #8C84B3;
 }
 
-/* Container de checkbox e termos */
 .checkbox-container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 8px;
     text-align: left;
-    flex-wrap: wrap; /* Quebra linha se necessário */
+    flex-wrap: nowrap;
+    white-space: nowrap;
     margin-top: 10px;
-    width: 100%;
 }
 
-/* Checkbox */
 .checkbox-container input[type="checkbox"] {
     appearance: none;
     -webkit-appearance: none;
@@ -144,7 +133,6 @@ body {
     left: 2px;
 }
 
-/* Label do checkbox */
 .checkbox-container label {
     color: #F0F1F2;
     font-size: 14px;
@@ -152,27 +140,21 @@ body {
     margin-right: 4px;
 }
 
-/* Ajuste para termos de uso e política */
 .checkbox-container .terms-container {
-    flex-wrap: wrap; /* Ajusta caso a linha seja quebrada */
-    align-items: center;
-    gap: 5px;
-    display: inline-block;
-    vertical-align: middle;
+    display: flex;
+    align-items: center; 
+    gap: 4px;
+    line-height: normal; 
 }
 
-/* Estilo dos links dos termos */
 .checkbox-container .terms-container a {
     color: #F2CF66;
     text-decoration: none;
     font-size: 14px;
-    white-space: nowrap; /* Evita quebra de linha nos links */
-    display: inline-block;
-    vertical-align: middle;
+    white-space: nowrap;
 }
 
 .checkbox-container .terms-container a:hover {
     color: #8C84B3;
 }
-
 
