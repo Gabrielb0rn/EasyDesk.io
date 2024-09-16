@@ -152,8 +152,12 @@ body {
     text-decoration: none;
     font-size: 14px;
     white-space: nowrap;
+    
 }
 
 .checkbox-container .terms-container a:hover {
     color: #8C84B3;
 }
+
+/* Telefone */
+

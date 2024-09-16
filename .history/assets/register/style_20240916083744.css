@@ -144,7 +144,7 @@ body {
     display: flex;
     align-items: center; 
     gap: 4px;
-    line-height: normal; 
+    line-height: normal; /* Reseta o line-height para o padrão */
 }
 
 .checkbox-container .terms-container a {
@@ -157,3 +157,6 @@ body {
 .checkbox-container .terms-container a:hover {
     color: #8C84B3;
 }
+
+/* Telefone */
+

@@ -156,4 +156,11 @@ body {
 
 .checkbox-container .terms-container a:hover {
     color: #8C84B3;
+    display: flex;
+    align-items: center; 
+    gap: 4px;
+    line-height: normal; 
 }
+
+/* Telefone */
+
