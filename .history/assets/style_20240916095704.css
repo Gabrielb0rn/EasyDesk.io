@@ -443,83 +443,90 @@ body.dark-theme .theme-toggle img {
     }
 }
 
-/* Seção de Contato */
-.contact-us-section {
+/* Estilos para a seção de preços */
+.pricing-section {
     text-align: center;
     padding: 40px 20px;
-    background-color: var(--header-bg);
 }
 
-.contact-us-section h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.contact-us-section p {
-    font-size: 18px;
-    margin-bottom: 40px;
-}
-
-.contact-form-container {
+.pricing-cards {
     display: flex;
-    justify-content: center;
-    margin-bottom: 40px;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 600px;
+.pricing-cards .card {
     background-color: var(--card-bg);
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
-form label {
-    font-size: 16px;
+.pricing-cards .card:hover {
+    transform: translateY(-10px);
+    background-color: var(--card-hover-color);
+}
+
+.pricing-cards h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.pricing-cards p {
+    font-size: 18px;
     margin-bottom: 10px;
-    color: var(--text-color);
 }
 
-form input, form textarea {
+.pricing-cards ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.pricing-cards ul li {
+    margin-bottom: 10px;
+}
+
+/* Estilos para a seção de contato */
+.contact-section {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px;
     padding: 10px;
     margin-bottom: 20px;
-    border: 1px solid var(--card-hover-color);
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: var(--bg-color);
 }
 
-form button {
+.contact-form button {
+    padding: 10px 20px;
     background-color: var(--button-bg);
     color: var(--button-text-color);
     border: none;
-    padding: 15px;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 16px;
 }
 
-form button:hover {
+.contact-form button:hover {
     background-color: var(--link-hover-color);
-}
-
-/* Informações de Contato */
-.contact-info {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--header-bg);
-}
-
-.contact-info h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 18px;
 }

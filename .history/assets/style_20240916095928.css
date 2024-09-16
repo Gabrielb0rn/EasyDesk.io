@@ -485,41 +485,4 @@ form label {
 
 form input, form textarea {
     padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--card-hover-color);
-    border-radius: 5px;
-    font-size: 16px;
-    color: var(--text-color);
-    background-color: var(--bg-color);
-}
-
-form button {
-    background-color: var(--button-bg);
-    color: var(--button-text-color);
-    border: none;
-    padding: 15px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-size: 16px;
-}
-
-form button:hover {
-    background-color: var(--link-hover-color);
-}
-
-/* Informações de Contato */
-.contact-info {
-    text-align: center;
-    padding: 40px 20px;
-    background-color: var(--header-bg);
-}
-
-.contact-info h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    font-size: 18px;
-}
+    margin-bottom:
