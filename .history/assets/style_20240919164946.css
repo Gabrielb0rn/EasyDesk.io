@@ -675,7 +675,6 @@ form button:hover {
     }
 }
 
-
 /* Seção específica para a página do plano básico */
 .hero h1 {
     font-size: 48px;
@@ -716,4 +715,14 @@ form button:hover {
 .service-card p {
     margin-bottom: 10px;
     color: var(--text-color);
+}
+
+/* Ajuste do botão de logout */
+.auth-buttons .sign-out {
+    background-color: #f2a285;
+    color: white;
+}
+
+.auth-buttons .sign-out:hover {
+    background-color: #565AA6;
 }
