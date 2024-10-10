@@ -52,7 +52,7 @@
         <section class="about-location">
             <h2>Localização</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9510.208125819185!2d-48.49829735881138!3d-27.550291999660544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527475e01a8efef%3A0x5b0f13adab8483ec!2sSENAI%20Florian%C3%B3polis%20(CTAI)!5e1!3m2!1spt-BR!2sbr!4v1725464397725!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"x></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9510.208125819185!2d-48.49829735881138!3d-27.550291999660544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527475e01a8efef%3A0x5b0f13adab8483ec!2sSENAI%20Florian%C3%B3polis%20(CTAI)!5e1!3m2!1spt-BR!2sbr!4v1725464397725!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" ></iframe>
             </div>
         </section>
 
@@ -109,24 +109,9 @@
     </main>
     <script>
         function toggleTheme() {
-            // Alternar a classe 'dark-theme' no corpo do documento
             document.body.classList.toggle('dark-theme');
-            
-            // Selecionar o ícone do tema
-            const themeIcon = document.getElementById('theme-icon');
-            
-            // Verificar se a classe 'dark-theme' está presente
-            if (document.body.classList.contains('dark-theme')) {
-                // Tema escuro: mostrar o sol
-                themeIcon.src = "resources/nav/bright-sun-light-svgrepo-com.svg";
-                themeIcon.alt = "Mudar para o tema claro"; // Atualizar texto alternativo
-            } else {
-                // Tema claro: mostrar a lua
-                themeIcon.src = "resources/nav/moon-white-svgrepo-com (1).svg";
-                themeIcon.alt = "Mudar para o tema escuro"; // Atualizar texto alternativo
-            }
         }
-        
     </script>
+    <script src="script.js"></script>
 </body>
 </html>

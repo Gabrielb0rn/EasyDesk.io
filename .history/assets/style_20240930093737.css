@@ -30,7 +30,8 @@ body.dark-theme {
     --hero-bg-gradient: linear-gradient(to bottom, #6a11cb, #2575fc); /* Inalterado no modo escuro */
     --card-bg: #444;
     --card-hover-color: #555;
-    --theme-icon: 'resources/nav/moon-white-svgrepo-com (1).svg';
+    themeIcon.src = "resources/nav/bright-sun-light-svgrepo-com.svg";
+                themeIcon.alt = "Mudar para o tema claro"; // Atualizar texto alternativo
 }
 
 body {

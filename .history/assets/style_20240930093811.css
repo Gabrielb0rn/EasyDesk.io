@@ -30,7 +30,7 @@ body.dark-theme {
     --hero-bg-gradient: linear-gradient(to bottom, #6a11cb, #2575fc); /* Inalterado no modo escuro */
     --card-bg: #444;
     --card-hover-color: #555;
-    --theme-icon: 'resources/nav/moon-white-svgrepo-com (1).svg';
+    theme-icon: 'resources/nav\moon-white-svgrepo-com (1).svg';
 }
 
 body {
